@@ -35,7 +35,7 @@ const Hero = () => {
     <>
       <StyledHero>
         <Container maxWidth="lg">
-          <Grid container spacing={2}>
+          <Grid container spacing={2} display="flex" justifyContent="center" pb={3}>
             <Grid size={{ xs: 12 ,md: 5}}>
               <Box position="relative" >
                 <Box position="absolute" width={"150%"} top={-100} right={0} >
@@ -45,29 +45,30 @@ const Hero = () => {
                 <Box position="relative" textAlign={"center"} >
                   <StyledImg src={Avatar} />
                 </Box>
-              
             </Grid>
             <Grid size={{ xs: 12 ,md: 7}}>
-              <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Evandro Edgariano</Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign={"center"} >Developer</Typography>
-              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
-                <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
-                  <StyledButton onClick={()=> console.log("Donwload")}>
-                      <DownloadIcon />
+              <Box position="relative" >
+                <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Evandro Edgariano</Typography>
+                <Typography color="primary.contrastText" variant="h2" textAlign={"center"} >Developer</Typography>
+                <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
+                  <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
+                    <StyledButton onClick={()=> console.log("Donwload")}>
+                        <DownloadIcon />
+                        <Typography>
+                          Download CV
+                        </Typography>
+                    </StyledButton>
+                  </Grid>
+                  <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
+                    <StyledButton onClick={()=> console.log("Contact Me")}>
+                      <MailOutlineIcon />
                       <Typography>
-                        Download CV
+                        Contact Me
                       </Typography>
-                  </StyledButton>
+                    </StyledButton>
+                  </Grid>
                 </Grid>
-                <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
-                  <StyledButton onClick={()=> console.log("Contact Me")}>
-                    <MailOutlineIcon />
-                    <Typography>
-                      Contact Me
-                    </Typography>
-                  </StyledButton>
-                </Grid>
-              </Grid>
+              </Box>
             </Grid>
           </Grid>
         </Container>

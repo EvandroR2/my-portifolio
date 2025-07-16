@@ -30,7 +30,7 @@ const Projects = () => {
   return (
     <StyledProjects>
         <Container maxWidth="lg">
-            <Grid container spacing={2}>
+            <Grid container spacing={2} display="flex" justifyContent="center" pb={3}>
                 <Grid size={{ xs: 12 ,md: 5}}>
                     <Typography color="primary.contrastText" variant="h2" textAlign={"center"} pb={2}>
                       Projetos
