@@ -1,5 +1,5 @@
 import { Box, Container, Grid, styled, Typography } from "@mui/material"
-import Avatar from "../../../../assets/images/avatar.jpg"
+import AvatarEvandro from "../../../../assets/images/perfilSite74x74.png"
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/styledButton/styledButton";
@@ -14,6 +14,7 @@ const Hero = () => {
       height:"100vh",
       [theme.breakpoints.up('xs')]:{
         paddingTop:"100px"
+        
 
       },
       [theme.breakpoints.up('md')]:{
@@ -43,7 +44,7 @@ const Hero = () => {
                 </Box>
               </Box>
                 <Box position="relative" textAlign={"center"} >
-                  <StyledImg src={Avatar} />
+                  <StyledImg src={AvatarEvandro} />
                 </Box>
             </Grid>
             <Grid size={{ xs: 12 ,md: 7}}>
@@ -73,7 +74,6 @@ const Hero = () => {
           </Grid>
         </Container>
       </StyledHero>
-      
     </>
   )
 }
