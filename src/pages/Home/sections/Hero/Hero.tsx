@@ -1,81 +1,88 @@
-import { Box, Container, Grid, styled, Typography } from "@mui/material"
-import AvatarEvandro from "../../../../assets/images/perfilSite74x74.png"
-import DownloadIcon from '@mui/icons-material/Download';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { Box, Container, Grid, Typography, styled } from "@mui/material";
+import AvatarEvandro from "../../../../assets/images/perfilSite74x74.png";
+import DownloadIcon from "@mui/icons-material/Download";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import StyledButton from "../../../../components/styledButton/styledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 
+const StyledHero = styled("section")(({ theme }) => ({
+  minHeight: "100vh",
+  display: "flex",
+  alignItems: "center",
+  background: `linear-gradient(135deg, ${theme.palette.primary.main}, #0d1b2a)`,
+  color: theme.palette.primary.contrastText,
+  position: "relative",
+  overflow: "hidden",
+}));
+
+const StyledImg = styled("img")(({ theme }) => ({
+  width: "280px",
+  borderRadius: "50%",
+  border: `3px solid ${theme.palette.primary.contrastText}`,
+  boxShadow: "0 10px 40px rgba(0,0,0,0.4)",
+}));
+
 const Hero = () => {
-
-  const StyledHero = styled("div")(({ theme }) => ({
-      backgroundColor: theme.palette.primary.main,
-      display:"flex",
-      alignItems:"center",
-      height:"100vh",
-      [theme.breakpoints.up('xs')]:{
-        paddingTop:"100px"
-        
-
-      },
-      [theme.breakpoints.up('md')]:{
-        paddingTop:"0"
-
-      }
-
-
-  }))
-
-  const StyledImg = styled("img")(({ theme }) => ({
-    width: "75%",
-    borderRadius: "50%",
-    border: `1px solid ${theme.palette.primary.contrastText} `
-
-  }))
-
   return (
-    <>
-      <StyledHero>
-        <Container maxWidth="lg">
-          <Grid container spacing={2} display="flex" justifyContent="center" pb={3}>
-            <Grid size={{ xs: 12 ,md: 5}}>
-              <Box position="relative" >
-                <Box position="absolute" width={"150%"} top={-100} right={0} >
-                  <AnimatedBackground />
-                </Box>
-              </Box>
-                <Box position="relative" textAlign={"center"} >
-                  <StyledImg src={AvatarEvandro} />
-                </Box>
-            </Grid>
-            <Grid size={{ xs: 12 ,md: 7}}>
-              <Box position="relative" >
-                <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Evandro Edgariano</Typography>
-                <Typography color="primary.contrastText" variant="h2" textAlign={"center"} >Developer</Typography>
-                <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
-                  <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
-                    <StyledButton onClick={()=> console.log("Donwload")}>
-                        <DownloadIcon />
-                        <Typography>
-                          Download CV
-                        </Typography>
-                    </StyledButton>
-                  </Grid>
-                  <Grid size={{ xs: 12, md: 5}} display="flex" justifyContent="center">
-                    <StyledButton onClick={()=> console.log("Contact Me")}>
-                      <MailOutlineIcon />
-                      <Typography>
-                        Contact Me
-                      </Typography>
-                    </StyledButton>
-                  </Grid>
-                </Grid>
-              </Box>
-            </Grid>
-          </Grid>
-        </Container>
-      </StyledHero>
-    </>
-  )
-}
+    <StyledHero>
+      <Container maxWidth="lg">
+        <Grid container spacing={4} alignItems="center">
+          
+          {/* TEXTO */}
+          <Grid xs={12} md={6}>
+            <Typography variant="h5" mb={1} sx={{ opacity: 0.8 }}>
+              Olá, eu sou
+            </Typography>
 
-export default Hero
+            <Typography variant="h2" fontWeight="bold">
+              Evandro Edgariano
+            </Typography>
+
+            <Typography variant="h4" color="secondary" mt={1}>
+              Desenvolvedor Full Stack
+            </Typography>
+
+            <Typography variant="body1" mt={3} maxWidth="500px">
+              Desenvolvo aplicações modernas utilizando React, C# e APIs,
+              focando em performance, organização e experiência do usuário.
+            </Typography>
+
+            {/* BOTÕES */}
+            <Box mt={4} display="flex" gap={2} flexWrap="wrap">
+              <StyledButton
+                onClick={() => window.open("/curriculoLinkedin.pdf", "_blank")}
+              >
+                <DownloadIcon />
+                <Typography>Download CV</Typography>
+              </StyledButton>
+
+              <StyledButton
+                onClick={() =>
+                  (window.location.href = "mailto:evandroedgariano@gmail.com")
+                }
+              >
+                <MailOutlineIcon />
+                <Typography>Contato</Typography>
+              </StyledButton>
+            </Box>
+          </Grid>
+
+          {/* IMAGEM */}
+          <Grid xs={12} md={6}>
+            <Box position="relative" display="flex" justifyContent="center">
+              
+              {/* Background animado */}
+              <Box position="absolute" width="140%" top={-120}>
+                <AnimatedBackground />
+              </Box>
+
+              <StyledImg src={AvatarEvandro} />
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </StyledHero>
+  );
+};
+
+export default Hero;
