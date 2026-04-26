@@ -81,8 +81,8 @@ npm run dev
 
 * 🌐 Site: https://www.evandroedgariano.com.br/
 * GitHub: https://github.com/EvandroR2
-* LinkedIn: (adicione aqui)
-* Email: (adicione aqui)
+* LinkedIn: https://www.linkedin.com/in/evandro-edgariano-b8b627184/
+* Email: evandroedgariano@gmail.com
 
 ---
 
