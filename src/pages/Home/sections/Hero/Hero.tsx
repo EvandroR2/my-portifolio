@@ -1,5 +1,5 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
-import AvatarEvandro from "../../../../assets/images/perfilSite74x74.png";
+import AvatarEvandro from "../../../../assets/images/eu2percentual.png";
 import DownloadIcon from "@mui/icons-material/Download";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import StyledButton from "../../../../components/styledButton/styledButton";
@@ -29,7 +29,7 @@ const Hero = () => {
         <Grid container spacing={4} alignItems="center">
           
           {/* TEXTO */}
-          <Grid size={{xs:12, md:6}}>
+          <Grid xs={12} md={6}>
             <Typography variant="h5" mb={1} sx={{ opacity: 0.8 }}>
               Olá, eu sou
             </Typography>
@@ -68,7 +68,7 @@ const Hero = () => {
           </Grid>
 
           {/* IMAGEM */}
-          <Grid size={{xs:12, md:6}}>
+          <Grid xs={12} md={6}>
             <Box position="relative" display="flex" justifyContent="center">
               
               {/* Background animado */}

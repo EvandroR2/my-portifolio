@@ -55,7 +55,7 @@ const Projects = () => {
         {/* GRID DE CARDS */}
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid size={{xs:12, md:4}} key={index}>
+            <Grid xs={12} md={4} key={index}>
               <Card
                 sx={{
                   height: "100%",
