@@ -29,7 +29,7 @@ const Hero = () => {
         <Grid container spacing={4} alignItems="center">
           
           {/* TEXTO */}
-          <Grid xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <Typography variant="h5" mb={1} sx={{ opacity: 0.8 }}>
               Olá, eu sou
             </Typography>
@@ -68,7 +68,7 @@ const Hero = () => {
           </Grid>
 
           {/* IMAGEM */}
-          <Grid xs={12} md={6}>
+          <Grid size={{xs:12, md:6}}>
             <Box position="relative" display="flex" justifyContent="center">
               
               {/* Background animado */}
