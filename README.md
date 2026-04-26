@@ -1,69 +1,89 @@
-# React + TypeScript + Vite
+# 💼 Portfólio - Evandro Edgariano
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é meu portfólio pessoal, desenvolvido para apresentar meus projetos, habilidades e experiências como desenvolvedor.
 
-Currently, two official plugins are available:
+## 🌐 Acesse o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 https://www.evandroedgariano.com.br/
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* Vite
+* Material UI (MUI)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Objetivo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Centralizar meus projetos e demonstrar, na prática, minhas habilidades em desenvolvimento front-end, organização de código e criação de interfaces modernas.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Funcionalidades
+
+* Apresentação pessoal (Hero)
+* Seção de projetos com:
+
+  * imagem/GIF demonstrativo
+  * link para GitHub
+  * link para aplicação online
+* Layout responsivo
+* Interface moderna e intuitiva
+
+## 📸 Projeto em destaque
+
+### 📅 Calendário 2023
+
+* 🔗 GitHub: https://github.com/EvandroR2/meucalendario2023
+* 🌐 Demo: https://meucalendario2023.vercel.app/
+
+Aplicação desenvolvida com foco em manipulação de datas e organização visual, utilizando HTML, CSS e JavaScript.
+
+## 🧠 Aprendizados
+
+Durante o desenvolvimento deste portfólio, trabalhei com:
+
+* Componentização em React
+* Organização de estrutura escalável
+* Criação de componentes reutilizáveis (ex: ProjectCard)
+* Boas práticas de UI/UX
+* Responsividade
+* Integração com links externos (GitHub e deploys)
+
+## 📁 Estrutura do projeto
+
+```plaintext
+src/
+  components/
+    ProjectCard/
+  pages/
+    Home/
+      sections/
+        Hero/
+        Projects/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Como executar o projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Clonar repositório
+git clone https://github.com/seu-usuario/seu-repo.git
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Acessar pasta
+cd my-portifolio
+
+# Instalar dependências
+npm install
+
+# Rodar projeto
+npm run dev
 ```
+
+## 📬 Contato
+
+* 🌐 Site: https://www.evandroedgariano.com.br/
+* GitHub: https://github.com/EvandroR2
+* LinkedIn: (adicione aqui)
+* Email: (adicione aqui)
+
+---
+
+💡 Este projeto está em constante evolução, com melhorias visuais, novos projetos e novas funcionalidades.
