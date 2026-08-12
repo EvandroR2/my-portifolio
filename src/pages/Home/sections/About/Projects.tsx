@@ -21,27 +21,21 @@ const StyledProjects = styled("section")(({ theme }) => ({
 
 const Projects = () => {
   const projects = [
-    {
-      title: "Lista de Compras",
-      description: "Aplicação simples utilizando HTML, CSS e JavaScript.",
-      link: "#",
-    },
-    {
-      title: "Calendário",
-      description: "Projeto com manipulação de datas.",
-      link: "#",
-    },
-    {
-      title: "Formulário",
-      description: "Validação de campos com JavaScript.",
-      link: "#",
-    },
-  ];
+  {
+    title: "Calendário e Agenda",
+    description:
+      "Calendário anual responsivo desenvolvido com HTML, CSS e JavaScript.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/EvandroR2/meucalendario2023",
+    demoUrl: "https://meucalendario2023.vercel.app/",
+    image: "/images/Calendario2023.gif",
+  },
+];
 
   return (
-    <StyledProjects>
+    <StyledProjects id="projetos">
       <Container maxWidth="lg">
-        
+
         {/* TÍTULO */}
         <Box textAlign="center" mb={6}>
           <Typography variant="h3" fontWeight="bold">
@@ -56,7 +50,7 @@ const Projects = () => {
         {/* GRID DE CARDS */}
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid size={{xs:12, md:4}} key={index}>
+            <Grid size={{ xs: 12, md: 4 }} key={index}>
               <Card
                 sx={{
                   height: "100%",
@@ -82,10 +76,21 @@ const Projects = () => {
 
                 <CardActions>
                   <Button
-                    size="small"
-                    onClick={() => window.open(project.link)}
+                    component="a"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Ver Projeto
+                    Ver código
+                  </Button>
+
+                  <Button
+                    component="a"
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver projeto
                   </Button>
                 </CardActions>
               </Card>

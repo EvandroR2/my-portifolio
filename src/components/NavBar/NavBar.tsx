@@ -30,9 +30,9 @@ const NavBar = () => {
   };
 
   const menuItems = [
-  { label: "About", url: "https://evandror2portifolio.vercel.app/about.html" },
-  { label: "Skills", url: "https://evandror2portifolio.vercel.app/index.html" },
-  { label: "Projects", url: "https://evandror2portifolio.vercel.app/about.html" },
+  { label: "Sobre", url: "#sobre" },
+  { label: "Habilidades", url: "#habilidades" },
+  { label: "Projetos", url: "#projetos" },
 ];
 
 
@@ -66,7 +66,6 @@ const NavBar = () => {
                         component="a"
                         key={index}
                         href={item.url}
-                        target="_blank"
                         rel="noopener noreferrer">
                         <ListItemText primary={item.label} />
                       </ListItem>
@@ -83,7 +82,6 @@ const NavBar = () => {
                   key={item.label}
                   component="a"
                   href={item.url}
-                  target="_blank"
                   rel="noopener noreferrer" >
                   {item.label}
                 </MenuItem>
