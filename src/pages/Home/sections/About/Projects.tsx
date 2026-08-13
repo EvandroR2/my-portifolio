@@ -21,16 +21,16 @@ const StyledProjects = styled("section")(({ theme }) => ({
 
 const Projects = () => {
   const projects = [
-  {
-    title: "Calendário e Agenda",
-    description:
-      "Calendário anual responsivo desenvolvido com HTML, CSS e JavaScript.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/EvandroR2/meucalendario2023",
-    demoUrl: "https://meucalendario2023.vercel.app/",
-    image: "/images/Calendario2023.gif",
-  },
-];
+    {
+      title: "Calendário e Agenda",
+      description:
+        "Calendário anual responsivo desenvolvido com HTML, CSS e JavaScript.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/EvandroR2/meucalendario2023",
+      demoUrl: "https://meucalendario2023.vercel.app/",
+      image: "/images/Calendario2023.gif",
+    },
+  ];
 
   return (
     <StyledProjects id="projetos">
@@ -54,6 +54,8 @@ const Projects = () => {
               <Card
                 sx={{
                   height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
                   backgroundColor: "#1b263b",
                   color: "#fff",
                   borderRadius: "16px",
@@ -64,8 +66,8 @@ const Projects = () => {
                   },
                 }}
               >
-                <CardContent>
-                  <Typography variant="h5" fontWeight="bold">
+                <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography variant="h5" fontWeight="bold" >
                     {project.title}
                   </Typography>
 
@@ -74,12 +76,26 @@ const Projects = () => {
                   </Typography>
                 </CardContent>
 
-                <CardActions>
+                <CardActions
+                  sx={{
+                    padding: 2,
+                    gap: 1,
+                  }}
+                >
                   <Button
                     component="a"
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    variant="outlined"
+                    sx={{
+                      color: "#fff",
+                      borderColor: "#fff",
+                      "&:hover": {
+                        borderColor: "#f86078",
+                        backgroundColor: "rgba(248, 96, 120, 0.12)",
+                      },
+                    }}
                   >
                     Ver código
                   </Button>
@@ -89,6 +105,8 @@ const Projects = () => {
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    variant="contained"
+                    color="secondary"
                   >
                     Ver projeto
                   </Button>

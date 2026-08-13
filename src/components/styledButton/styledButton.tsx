@@ -13,7 +13,7 @@ const styledButton: React.FC<StyledButtonProps> = ({ children,onClick }) => {
         background:"transparent",
         border:`1px solid ${theme.palette.primary.contrastText}`,
         borderRadius:"3px",
-        padding:"5px, 15px",
+        padding: "8px 16px",
         width:"100%",
         display:"inline-flex",
         alignItems:"center",
